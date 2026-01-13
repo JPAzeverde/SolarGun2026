@@ -199,6 +199,7 @@
         /* --- SEÇÃO SOBRE --- */
         #sobre {
             padding: 80px 0;
+            width: 100%;
             background-color: var(--cor-branco);
         }
 
