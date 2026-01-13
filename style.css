@@ -26,6 +26,11 @@
             color: var(--cor-primaria);
             line-height: 1.6;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
         /* --- CLASSES UTILITÁRIAS --- */
         .container {
@@ -211,11 +216,26 @@
 
         /* --- CSS ATUALIZADO --- */
         .about-img {
-            height: 400px;
+            max-height: 400px;
             width: 100%;          /* ADICIONADO: Impede que exceda a tela */
             object-fit: cover;    /* ADICIONADO: Mantém a proporção cortando o excesso */
             border-radius: 8px;
         }
+
+        /* Garante que a imagem preencha a div pai sem estourar */
+        .about-img img {
+            width: 100%;          /* A imagem ocupa 100% da largura da DIV */
+            height: 100%;         /* A imagem ocupa 100% da altura da DIV */
+            object-fit: cover;    /* Corta a imagem para não ficar achatada */
+            display: block;       /* Remove espaços extras abaixo da imagem */
+            border-radius: 8px;   /* Mantém a borda arredondada */
+        }
+
+        /* Segurança extra para a div pai não deixar nada vazar */
+        .about-img {
+            overflow: hidden; 
+        }
+
 
         /* --- SEÇÃO SERVIÇOS --- */
         #servicos {
